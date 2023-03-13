@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="time">
+            <div class="circle" style="--clr:#ff2972;">
+                <div class="dots hr_dot"></div>
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70" id="hh"></circle>
+                </svg>
+                <div id="hour">00</div>
+            </div>
+            <div class="circle" style="--clr:#fee800;">
+                <div class="dots min_dot"></div>
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70" id="mm"></circle>
+                </svg>
+                <div id="minutes">00</div>
+            </div>
+            <div class="circle" style="--clr:#04fc43;">
+                <div class="dots sec_dot"></div>
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70" id="ss"></circle>
+                </svg>
+                <div id="seconds">00</div>
+            </div>
+            <div class="ap">
+                <div id="ampm">AM</div>
+            </div>     
+        </div>
+        <div id="time1">
+            <div id="hour1" style="--clr:#ff2972;">00</div>
+            <div id="minutes1" style="--clr:#fee800;">00</div>
+            <div id="seconds1" style="--clr:#04fc43;">00</div>
+            <div id="ampm1">AM</div>
+        </div> 
+
+        <div id="date">
+            <div id="day" style="--clr:#ff2972;">00</div>
+            <div id="month" style="--clr:#fee800;">00</div>
+            <div id="year" style="--clr:#04fc43;">00</div>
+            <div id="ddate">Date:</div>
+        </div> 
+    </div>
+   
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #2f363e;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 50px;
+    border-color: rgba(157, 3, 188, 0.538);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3), inset 5px 5px 15px rgba(0, 0, 0, 0.5), inset -5px -5px 20px rgba(255, 255, 255, 0.15);
+    padding: 30px;
+}
+
+#time{
+    display: flex;
+    gap: 40px;
+    color:aliceblue;
+}
+
+#time .circle svg{
+         position: relative;
+         width: 150px;
+         height: 150px;
+         transform: rotate(270deg);
+}
+
+#time .circle svg circle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: #191919;
+    stroke-width: 4;
+    transform: translate(5px, 5px);
+}
+
+#time .circle svg circle:nth-child(2){
+    stroke:var(--clr);
+    stroke-dasharray: 440;
+}
+
+#time .circle{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#time div{
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+#time .ap{
+    position: relative;
+    font: 1em;
+    transform: translateX(-20px);
+}
+
+.dots{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.dots::before{
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 15px;
+    height: 15px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clr),0 0 60px var(--clr);
+}
+
+#time1{
+    position:absolute;
+    top: 75%;
+    display: flex;
+ padding: 20px 10px;
+font-size: 2rem;
+font-weight: 600;
+border: 2px solid rgba(0, 0, 0, 0.5);
+border-radius: 50px;
+   box-shadow:5px 5px 10px rgba(0, 0, 0, 0.3), inset 5px 5px 15px rgba(0, 0, 0, 0.5), inset -5px -5px 20px rgba(255, 255, 255, 0.15);
+}
+
+#time1 div{
+    position: relative;
+    width: 60px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--clr);
+}
+
+#time1 div:nth-child(1)::after,#time1 div:nth-child(2)::after{
+    content: ":";
+    position: absolute;
+    right: -4px;
+}
+#time1 div:last-child{
+    font-size: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#time1 div:nth-child(2)::after{
+    animation: animate 1s steps(1) infinite;
+} 
+    @keyframes animate 
+    {
+        0%
+        {
+            opacity: 1;
+        }
+        50%
+        {
+            opacity: 0;
+        }
+    }
+   
+
+
+
+
+
+
+    /* #time div:nth-child(2)::after{
+        content: "Ankit Singh";  
+        position: absolute;
+       color: #27ff01;
+        top: -65px;
+    }
+   
+    
+    #time div:nth-child(2)::after{
+        animation: animate 1s steps(6) infinite;
+    } 
+        @keyframes animate 
+        {
+            0%
+            {
+                opacity: 1;
+            }
+            50%
+            {
+                opacity: 0;
+            }
+        } */
+
+
+
+
+
+
+        #date{
+            position:absolute;
+            top: 8.5%;
+          
+            display: flex;
+         padding: 20px 10px;
+        font-size: 2rem;
+        font-weight: 600;
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        border-radius: 50px;
+           box-shadow:5px 5px 10px rgba(0, 0, 0, 0.3), inset 5px 5px 15px rgba(0, 0, 0, 0.5), inset -5px -5px 20px rgba(255, 255, 255, 0.15);
+        }
+
+        #date div{
+            position: relative;
+            width: 60px;
+            right: -40px;
+           
+            text-align: center;
+            font-weight: 500;
+            color: var(--clr);
+        }
+
+        #date div:nth-child(1)::after,#date div:nth-child(2)::after{
+            content: "/";
+            position: absolute;
+            right: -2px;
+        }
+
+        #date div:last-child{
+            font-size: 0.6em;
+            display: flex;
+            left: -185px;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+
+        #date div:nth-child(1)::after,  #date div:nth-child(2)::after{
+            animation: animate 1s steps(1) infinite;
+        } 
+            @keyframes animate 
+            {
+                0%
+                {
+                    opacity: 1;
+                }
+                50%
+                {
+                    opacity: 0;
+                }
+            }
